@@ -1,0 +1,37 @@
+config:
+  name:
+    YandexPay_Build::Release
+  build_counter:
+    Yandex_Pay_Release_Build_Counter
+  runner_version:
+    2021.09.27-8673273
+stages:
+  assemble:
+    work_dir:
+      mobile/yandex-pay/android/
+    cmd:
+      - echo $SECRING_GPG_CONTENT | base64 -d  > "/tmp/secring.gpg"
+      - ./gradlew
+        :core:assembleRelease
+        :xplat-common:assembleRelease
+        :xplat-eventus-common:assembleRelease
+        :xplat-yandex-pay:assembleRelease
+      - ./gradlew
+        :core:publishReleasePublicationToSonatypeRepository
+        :xplat-common:publishReleasePublicationToSonatypeRepository
+        :xplat-eventus-common:publishReleasePublicationToSonatypeRepository
+        :xplat-yandex-pay:publishReleasePublicationToSonatypeRepository
+      - rm "/tmp/secring.gpg"
+    lxc:
+      2161339669
+    android-sdk:
+      platforms(28,29,30,31)+tools(31.0.0)
+    artifacts:
+      +core/build/outputs/*: core/outputs
+      +xplat-common/build/outputs/*: xplat-common/outputs
+      +xplat-eventus-common/build/outputs/*: xplat-eventus-common/outputs
+      +xplat-yandex-pay/build/outputs/*: xplat-yandex-pay/outputs
+    multislot:
+      MEDIUM
+    secrets:
+      METRIKA:ANDROID_SIGNING_SECRING_GPG: SECRING_GPG_CONTENT

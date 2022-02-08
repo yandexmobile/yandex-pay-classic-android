@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="yandexpay_diehard_prod_url_string" translatable="false">https://diehard.yandex.net/</string>
+    <string name="yandexpay_diehard_stage_url_string" translatable="false">https://pci-tf.fin.yandex.net/</string>
+    <string name="yandexpay_diehard_prod_service_token" translatable="false">yandex_pay_plus_backend_f8c528b768e7421ee0e3258995201aaa</string>
+    <string name="yandexpay_diehard_stage_service_token" translatable="false">payment_sdk_19d9962ddd08e7d52a2668cbcd5f7b7e</string>
+    <integer name="yandexpay_diehard_region_id">225</integer>
+</resources>

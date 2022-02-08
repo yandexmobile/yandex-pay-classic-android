@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="yandexpay_window_height">330dp</dimen>
+    <dimen name="yandexpay_horizontal_padding">16dp</dimen>
+    <dimen name="yandexpay_card_height">80dp</dimen>
+    <dimen name="yandexpay_card_list_item_height">96dp
+    </dimen> <!-- yandexpay_card_height + 2 * yandexpay_card_list_item_margin -->
+    <dimen name="yandexpay_card_list_item_margin">8dp</dimen>
+    <dimen name="yandexpay_checkout_button_padding">20dp</dimen>
+    <dimen name="yandexpay_license_agreement_text_padding">20dp</dimen>
+    <dimen name="yandexpay_progressbar_margin">40dp</dimen>
+    <dimen name="yandexpay_header_height">28dp</dimen>
+    <dimen name="yandexpay_header_top_margin">14dp</dimen>
+    <dimen name="yandexpay_next_button_height_min">64dp</dimen>
+    <dimen name="yandexpay_next_button_height_max">64dp</dimen>
+    <dimen name="yandexpay_main_button_bottom_margin">20dp</dimen>
+    <dimen name="yandexpay_card_number_input_collapsed_width">125dp</dimen>
+    <dimen name="yandexpay_standard_corner_radius">12dp</dimen>
+    <dimen name="yandexpay_smaller_corner_radius">8dp</dimen>
+    <dimen name="yandexpay_avatar_size">28dp</dimen>
+    <dimen name="yandexpay_done_drawable_padding">12dp</dimen>
+    <dimen name="yandexpay_header_to_content_gap">10dp</dimen>
+    <dimen name="yandexpay_pay_button_card_number_radius">@dimen/yandexpay_smaller_corner_radius
+    </dimen>
+    <dimen name="yandexpay_pay_button_corner_radius">@dimen/yandexpay_smaller_corner_radius</dimen>
+    <dimen name="yandexpay_card_input_field_padding">10dp</dimen>
+    <dimen name="yandexpay_gap_between_error_and_button">20dp</dimen>
+</resources>

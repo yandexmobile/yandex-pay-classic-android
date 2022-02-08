@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'org.jetbrains.dokka'
+}
+
+apply from: rootProject.file('gradle/publishing.gradle')
+
+android {
+    resourcePrefix "yandexpay_"
+
+    compileSdkVersion rootProject.ext.versions.compileSdk
+    buildToolsVersion rootProject.ext.versions.buildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions.minSdk
+        targetSdkVersion rootProject.ext.versions.targetSdk
+        versionCode rootProject.ext.versions.code
+        versionName rootProject.ext.versions.name
+
+        buildConfigField "String", "VERSION_NAME", /"${rootProject.ext.versions.name}"/
+        buildConfigField "String", "METRICA_API_KEY", '"281bdee0-f9c2-40cb-9863-888a83534f91"'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dokkaHtml.configure {
+    dokkaSourceSets {
+        named("main") {
+            noAndroidSdkLink.set(false)
+        }
+    }
+}
+
+dependencies {
+    implementation(project(':xplat-yandex-pay')) {
+        // Duplicate class ListenableFuture. Comes with libraries.lifecycleCompiler
+        exclude group: 'androidx.concurrent', module: 'concurrent-futures-ktx'
+    }
+
+    implementation libraries.kotlinStdLib
+    implementation libraries.coreKtx
+
+    implementation libraries.activity
+    implementation libraries.constraintLayout
+    implementation libraries.coordinatorLayout
+    implementation libraries.fragment
+    implementation libraries.lifecycleViewModel
+    implementation libraries.lifecycleLiveData
+    implementation libraries.lifecycleCompiler
+    implementation libraries.material
+    implementation libraries.preference
+    implementation libraries.recyclerView
+    kapt libraries.annotation
+
+    implementation libraries.okHttp
+
+    implementation libraries.mobMetrica
+    implementation libraries.authSdk
+
+    implementation libraries.shimmer
+}

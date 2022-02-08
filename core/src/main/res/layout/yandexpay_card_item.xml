@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    tools:context=".ui.views.CardItemView">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/yandexpay_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shimmer_base_color="?attr/yandexpay_shimmerColor"
+        app:shimmer_base_alpha="1"
+        app:shimmer_highlight_alpha="1"
+        app:shimmer_colored="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/yandexpay_card_item_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:contentDescription="@string/yandexpay_card_item_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp" />
+
+    <ImageView
+        android:id="@+id/yandexpay_card_item_accessory_image_center"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/yandexpay_card_item_accessory_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="20dp"
+        tools:src="@drawable/yandexpay_ic_arrow" />
+
+    <ImageView
+        android:id="@+id/yandexpay_card_item_accessory_image_top"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/yandexpay_card_item_accessory_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/yandexpay_ic_checkmark" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/yandexpay_card_item_image"
+        app:layout_constraintEnd_toStartOf="@id/yandexpay_card_item_accessory_image_center"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/yandexpay_card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/YandexPayTextAppearance.CardTitle"
+            tools:text="MasterCard Platinum" />
+
+        <TextView
+            android:id="@+id/yandexpay_card_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:textAppearance="@style/YandexPayTextAppearance.CardTitle"
+            tools:text="•••• 4891" />
+
+    </LinearLayout>
+</merge>

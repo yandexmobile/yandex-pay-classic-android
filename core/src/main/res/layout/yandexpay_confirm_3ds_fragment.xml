@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:transitionName="paymentTransition"
+    android:paddingHorizontal="@dimen/yandexpay_horizontal_padding"
+    tools:context=".ui.fragments.Confirm3DSFragment">
+
+    <com.yandex.pay.core.ui.views.HeaderView
+        android:id="@+id/yandexpay_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/yandexpay_header_top_margin" />
+
+    <ProgressBar
+        android:id="@+id/yandexpay_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/yandexpay_progressbar_margin"
+        android:visibility="visible"
+        android:indeterminate="true" />
+
+    <WebView
+        android:id="@+id/yandexpay_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/yandexpay_header_to_content_gap"
+        android:background="?attr/yandexpay_background"
+        android:visibility="gone" />
+
+</LinearLayout>

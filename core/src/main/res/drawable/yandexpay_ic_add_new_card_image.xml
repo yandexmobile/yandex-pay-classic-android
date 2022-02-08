@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <path
+        android:pathData="M10,0C9.3096,0 8.75,0.5596 8.75,1.25V8.75H1.25C0.5596,8.75 0,9.3096 0,10C0,10.6904 0.5596,11.25 1.25,11.25H8.75V18.75C8.75,19.4404 9.3096,20 10,20C10.6904,20 11.25,19.4404 11.25,18.75V11.25H18.75C19.4404,11.25 20,10.6904 20,10C20,9.3096 19.4404,8.75 18.75,8.75H11.25V1.25C11.25,0.5596 10.6904,0 10,0Z"
+        android:fillColor="?attr/yandexpay_addNewCardColor" />
+</vector>

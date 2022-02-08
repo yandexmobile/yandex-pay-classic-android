@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="yandexpay_slide_animation_duration">@android:integer/config_mediumAnimTime
+    </integer>
+    <integer name="yandexpay_fade_animation_duration">100</integer>
+    <integer name="yandexpay_pay_button_toggle_duration">@android:integer/config_shortAnimTime
+    </integer>
+    <integer name="yandexpay_long_error_hide_timeout">4000</integer>
+    <integer name="yandexpay_short_error_hide_timeout">3000</integer>
+    <integer name="yandexpay_vibro_duration">250</integer>
+    <integer name="yandexpay_main_window_close_delay">1000</integer>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingHorizontal="@dimen/yandexpay_horizontal_padding"
+    android:transitionName="paymentTransition"
+    tools:context=".ui.fragments.BindCardFragment">
+
+    <com.yandex.pay.core.ui.views.HeaderView
+        android:id="@+id/yandexpay_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/yandexpay_header_top_margin" />
+
+    <TextView
+        android:id="@+id/yandexpay_card_details_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yandexpay_card_details_prompt"
+        android:textAppearance="@style/YandexPayTextAppearance.CardDetailsPrompt"
+        android:layout_marginTop="24dp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yandexpay_header_view" />
+
+    <LinearLayout
+        android:id="@+id/yandexpay_card_binding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/yandexpay_card_details_prompt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+
+        <com.yandex.pay.core.ui.views.CardNumberInput
+            android:id="@+id/yandexpay_card_number_input"
+            android:layout_width="@dimen/yandexpay_card_number_input_collapsed_width"
+            android:layout_height="match_parent" />
+
+        <Space
+            android:id="@+id/yandexpay_card_number_to_expiration_date_space"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <com.yandex.pay.core.ui.views.ExpirationDateInput
+            android:id="@+id/yandexpay_expiration_date_input"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <Space
+            android:id="@+id/yandexpay_expiration_date_to_cvn_space"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <com.yandex.pay.core.ui.views.CvnInput
+            android:id="@+id/yandexpay_cvn_input"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/yandexpay_error_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:textAppearance="@style/YandexPayTextAppearance.CardBindingError"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yandexpay_card_binding_layout"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.yandex.pay.core.ui.views.BindCardButton
+        android:id="@+id/yandexpay_bind_card_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/yandexpay_next_button_height_max"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="@dimen/yandexpay_main_button_bottom_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yandexpay_error_text"
+        app:layout_constraintVertical_bias="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

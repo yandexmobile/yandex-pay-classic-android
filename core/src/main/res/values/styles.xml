@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="YandexPayTextAppearance.LicenseAgreement" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/yandexpay_licenseAgreementColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.CheckoutButtonTitle" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/yandexpay_checkoutButtonTitleColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.Back" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/yandexpay_navigationTextColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.CardTitle" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/yandexpay_cardNameTextColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.Error" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/yandexpay_errorColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.Pay" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/yandexpay_pay_button_unbranded_text</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.Logout" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/yandexpay_black</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.PayButtonCardNumber" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/yandexpay_pay_button_branded_card_number</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.TextInput" parent="Widget.Design.TextInputLayout">
+        <item name="android:colorControlActivated">?attr/yandexpay_textFieldTintColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.Hint" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">?attr/yandexpay_cardEditHintColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.TextInput.Input">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/yandexpay_cardEditTextColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.NextButton" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/yandexpay_cardBindingButtonTitleColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.CheckoutProgressIndication" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/yandexpay_checkoutProgressIndicationColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.AvatarTitle" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/yandexpay_avatarTextColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.CardBindingError" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/yandexpay_cardBindingErrorColor</item>
+    </style>
+
+    <style name="YandexPayTextAppearance.CardDetailsPrompt" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/yandexpay_cardDetailsPromptColor</item>
+    </style>
+
+</resources>

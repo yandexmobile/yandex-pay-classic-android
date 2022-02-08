@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    tools:context=".ui.views.CheckoutButton">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/yandexpay_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_base_color="?attr/yandexpay_shimmerColor"
+        app:shimmer_base_alpha="1"
+        app:shimmer_highlight_alpha="1"
+        app:shimmer_colored="true" />
+
+    <TextView
+        android:id="@+id/yandexpay_progress_indication_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/YandexPayTextAppearance.CheckoutProgressIndication"
+        android:drawablePadding="@dimen/yandexpay_done_drawable_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/yandexpay_progress_bar"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        tools:text="Purchase processing..." />
+
+    <ProgressBar
+        android:id="@+id/yandexpay_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/yandexpay_progress_indication_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/yandexpay_done_drawable_padding"
+        android:indeterminate="true" />
+
+    <TextView
+        android:id="@+id/yandexpay_checkout_button_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yandexpay_checkout_button_title"
+        android:textAppearance="@style/YandexPayTextAppearance.CheckoutButtonTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/yandexpay_checkout_button_padding"
+        tools:text="Checkout" />
+
+    <TextView
+        android:id="@+id/yandexpay_checkout_button_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/YandexPayTextAppearance.CheckoutButtonTitle"
+        android:background="@drawable/yandexpay_checkout_price_title_background"
+        android:padding="8dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/yandexpay_checkout_button_padding"
+        tools:text="1 200,00RUB" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/yandexpay_checkout_progress_indication_group"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:constraint_referenced_ids="yandexpay_progress_indication_title, yandexpay_progress_bar" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/yandexpay_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:constraint_referenced_ids="yandexpay_checkout_button_price, yandexpay_checkout_button_title" />
+
+</merge>
+
+

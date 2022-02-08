@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="yandexpay_binding_cancelled_error">Привязка отклонена</string>
+    <string name="yandexpay_authorization_reject_error">Ошибка платежной системы</string>
+    <string name="yandexpay_expired_card_error">Карта просрочена</string>
+    <string name="yandexpay_limit_exceeded_error">Достигнут лимит по операциям с картой</string>
+    <string name="yandexpay_not_enough_funds_error">На карте недостаточно средств</string>
+    <string name="yandexpay_payment_timeout_error">Транзакция завершилась по таймауту, попыток списания средств не было</string>
+    <string name="yandexpay_technical_error">Техническая ошибка</string>
+    <string name="yandexpay_3ds_failed_error">Проблема с прохождением 3DS</string>
+    <string name="yandexpay_invalid_processing_request_error">Ошибка в переданных в платежную систему данных</string>
+    <string name="yandexpay_restricted_card_error">Карта недействительна</string>
+    <string name="yandexpay_transaction_not_permitted_error">Операция недоступна для данной карты</string>
+    <string name="yandexpay_unknown_validation_problem">Произошла ошибка</string>
+    <string name="yandexpay_network_error">Произошла ошибка</string>
+    <string name="yandexpay_unknown_error">Извините, что-то пошло не так</string>
+</resources>

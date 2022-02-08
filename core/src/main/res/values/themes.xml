@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="YandexPayTheme.Common.Light" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:colorBackground">@color/yandexpay_background</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColorPrimary">#CC000000</item>
+        <item name="android:textColorSecondary">#40000000</item>
+        <item name="android:colorEdgeEffect">@color/yandexpay_edge_effect</item>
+
+        <item name="yandexpay_errorColor">@color/yandexpay_error</item>
+        <item name="yandexpay_background">@drawable/yandexpay_bg_panel</item>
+        <item name="yandexpay_brandButtonIcon">@drawable/yandexpay_ic_brand_button</item>
+
+        <item name="yandexpay_disclosureMarkColor">@color/yandexpay_disclosure_mark</item>
+        <item name="yandexpay_navigationArrowColor">@color/yandexpay_navigation_arrow</item>
+        <item name="yandexpay_checkmarkColor">@color/yandexpay_checkmark</item>
+        <item name="yandexpay_checkoutButtonColor">@color/yandexpay_checkout_button</item>
+        <item name="yandexpay_checkoutButtonTitleColor">@color/yandexpay_checkout_button_title
+        </item>
+        <item name="yandexpay_topHandleColor">@color/yandexpay_background</item>
+        <item name="yandexpay_navigationTextColor">@color/yandexpay_navigation_text</item>
+        <item name="yandexpay_cardNameTextColor">@color/yandexpay_main_text</item>
+        <item name="yandexpay_licenseAgreementColor">@color/yandexpay_license_agreement_text</item>
+        <item name="yandexpay_addNewCardColor">@color/yandexpay_add_new_card</item>
+        <item name="yandexpay_textFieldTintColor">@color/yandexpay_control_activated</item>
+        <item name="yandexpay_textCursorColor">@color/yandexpay_control_activated</item>
+
+        <item name="yandexpay_cardBindingButtonColor">@color/yandexpay_card_binding_button</item>
+        <item name="yandexpay_cardBindingButtonTitleColor">
+            @color/yandexpay_card_binding_button_title
+        </item>
+        <item name="yandexpay_cardBindingProgressIndicationColor">
+            @color/yandexpay_card_binding_progress_indication
+        </item>
+        <item name="yandexpay_cardBindingProgressIndicationBackgroundColor">
+            @color/yandexpay_card_binding_progress_indication_background
+        </item>
+        <item name="yandexpay_cardBindingDoneColor">@color/yandexpay_card_binding_done_background
+        </item>
+        <item name="yandexpay_cardBindingDoneBackgroundColor">
+            @color/yandexpay_card_binding_done_background
+        </item>
+        <item name="yandexpay_cardBindingDisabledBackgroundColor">
+            @color/yandexpay_card_binding_disabled_background
+        </item>
+        <item name="yandexpay_cardBindingDisabledColor">@color/yandexpay_card_binding_disabled
+        </item>
+        <item name="yandexpay_cardBindingErrorColor">@color/yandexpay_card_binding_error</item>
+        <item name="yandexpay_cardBindingButtonErrorBackgroundColor">
+            @color/yandexpay_card_binding_error_background
+        </item>
+
+        <item name="yandexpay_shimmerColor">@color/yandexpay_shimmer</item>
+        <item name="yandexpay_priceTitleBackgroundColor">@color/yandexpay_price_title_background
+        </item>
+        <item name="yandexpay_cardBorderColor">@color/yandexpay_card_border</item>
+        <item name="yandexpay_checkoutProgressIndicationColor">
+            @color/yandexpay_checkout_progress_indication
+        </item>
+        <item name="yandexpay_checkoutProgressIndicationBackgroundColor">
+            @color/yandexpay_checkout_progress_indication_background
+        </item>
+        <item name="yandexpay_checkoutDoneBackgroundColor">@color/yandexpay_checkout_done_button
+        </item>
+        <item name="yandexpay_checkoutErrorBackgroundColor">
+            @color/yandexpay_checkout_error_background
+        </item>
+        <item name="yandexpay_logoTextColor">@color/yandexpay_logo_text</item>
+        <item name="yandexpay_cardEditHintColor">@color/yandexpay_card_edit_hint</item>
+        <item name="yandexpay_cardEditTextColor">@color/yandexpay_card_edit_text</item>
+        <item name="yandexpay_avatarTextColor">@color/yandexpay_main_text</item>
+        <item name="yandexpay_cardDetailsPromptColor">@color/yandexpay_card_details_prompt</item>
+    </style>
+</resources>

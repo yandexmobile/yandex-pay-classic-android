@@ -1,0 +1,20 @@
+service: paymentsdk
+title: yandexpay-android
+arcanum:
+  auto_merge:
+    requirements:
+      - system: arcanum
+        type: approved
+        data:
+          min_approvers_count: 1
+      - system: arcanum
+        type: comment_issues_closed
+      - system: arcanum
+        type: st_issue_linked
+      - system: teamcity-common
+        type: MobileNew_Monorepo_YandexPay_Android_Build
+        alias: YandexPay::Android::Build
+        restartable: true
+        data:
+          branch_prefix: yandex-pay/android
+          strategy: merge-pin

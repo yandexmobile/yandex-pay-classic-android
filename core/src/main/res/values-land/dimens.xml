@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="yandexpay_next_button_height_min">50dp</dimen>
+    <dimen name="yandexpay_next_button_height_max">64dp</dimen>
+    <dimen name="yandexpay_card_input_field_padding">6dp</dimen>
+    <dimen name="yandexpay_main_button_bottom_margin">14dp</dimen>
+    <dimen name="yandexpay_gap_between_error_and_button">8dp</dimen>
+</resources>

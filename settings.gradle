@@ -1,0 +1,7 @@
+include ':xplat-eventus-common'
+include ':xplat-common'
+include ':xplat-yandex-pay'
+include ':core'
+include ':sample'
+
+rootProject.name = "YandexPay"

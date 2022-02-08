@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="18dp"
+    android:viewportWidth="24"
+    android:viewportHeight="18">
+    <path
+        android:pathData="M2,9.7778L8.1538,16L22,2"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3"
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="?attr/yandexpay_checkoutProgressIndicationColor"
+        android:strokeLineCap="round" />
+</vector>

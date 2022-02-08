@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="yandexpay_authsdk_stage_url_string" translatable="false">oauth-test.yandex.ru</string>
+    <string name="yandexpay_authsdk_prod_url_string" translatable="false">oauth.yandex.ru</string>
+    <string-array name="yandexpay_authsdk_scopes">
+        <item>yandexpay:all</item>
+        <item>payments:all</item>
+    </string-array>
+</resources>

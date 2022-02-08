@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="yandexpay_auth_failed_error" translatable="false">Authorization failed</string>
+    <string name="yandexpay_unknown_merchant_origin" translatable="false">Unknown Merchant Origin</string>
+    <string name="yandexpay_unknown_merchant" translatable="false">Unknown Merchant</string>
+    <string name="yandexpay_unknown_gateway" translatable="false">Unknown Gateway</string>
+    <string name="yandexpay_insecure_merchant_origin" translatable="false">Insecure Merchant Origin</string>
+    <string name="yandexpay_amount_limit_exceeded" translatable="false">Amount Limit Exceeded</string>
+    <string name="yandexpay_invalid_amount" translatable="false">Invalid Amount</string>
+    <string name="yandexpay_invalid_country" translatable="false">Invalid Country</string>
+    <string name="yandexpay_invalid_currency" translatable="false">Invalid Currency</string>
+    <string name="yandexpay_amount_mismatch" translatable="false">Amount Mismatch</string>
+
+    <string name="yandexpay_unknown_error">Something went wrong</string>
+    <string name="yandexpay_unknown_validation_problem">Unknown problem</string>
+    <string name="yandexpay_network_error">Network error occurred</string>
+    <string name="yandexpay_binding_cancelled_error">Binding cancelled</string>
+    <string name="yandexpay_authorization_reject_error">Payment system error</string>
+    <string name="yandexpay_expired_card_error">Card is expired</string>
+    <string name="yandexpay_limit_exceeded_error">Card limit exceeded</string>
+    <string name="yandexpay_not_enough_funds_error">Not enough funds</string>
+    <string name="yandexpay_payment_timeout_error">Payment transaction timed out. No withdrawals were made</string>
+    <string name="yandexpay_technical_error">Technical error</string>
+    <string name="yandexpay_3ds_failed_error">3DS Validation failed</string>
+    <string name="yandexpay_invalid_processing_request_error">Invalid processing request</string>
+    <string name="yandexpay_restricted_card_error">Card binding is restricted</string>
+    <string name="yandexpay_transaction_not_permitted_error">Transaction not permitted for the card</string>
+</resources>

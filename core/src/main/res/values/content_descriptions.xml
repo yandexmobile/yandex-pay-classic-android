@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="yandexpay_top_handle_content_description">Window Handle</string>
+    <string name="yandexpay_main_logo_title">Main Logo</string>
+    <string name="yandexpay_card_item_image">Card Item Image</string>
+    <string name="yandexpay_card_item_accessory_image">Card Item Accessory Image</string>
+    <string name="yandexpay_logo">Yandex Pay Logo</string>
+    <string name="yandexpay_avatar">Avatar</string>
+</resources>

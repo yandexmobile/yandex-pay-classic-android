@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+apply from: rootProject.file('gradle/publishing.gradle')
+
+android {
+    compileSdkVersion rootProject.ext.versions.compileSdk
+    buildToolsVersion rootProject.ext.versions.buildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions.minSdk
+        targetSdkVersion rootProject.ext.versions.targetSdk
+        versionCode rootProject.ext.versions.code
+        versionName rootProject.ext.versions.name
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDirs += 'eventus-common'
+            }
+            manifest {
+                srcFile 'AndroidManifest.xml'
+            }
+        }
+    }
+}
+
+lint {
+    enabled false
+}
+
+dependencies {
+    implementation project(':xplat-common')
+}

@@ -1,0 +1,103 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = '1.6.10'
+    ext.dokka_version = '1.4.32'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokka_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://dl.bintray.com/qameta/maven' }
+    }
+}
+
+ext.versions = [
+    'name'                    : '0.1.0',
+    'code'                    : 1,
+
+    compileSdk                : 31,
+    targetSdk                 : 31,
+    minSdk                    : 23,
+    buildTools                : '31.0.0',
+
+    // https://developer.android.com/jetpack/androidx/versions
+    coreKtx                   : '1.6.0',  // https://developer.android.com/jetpack/androidx/releases/core
+    concurrentKtx             : '1.1.0',  // https://developer.android.com/jetpack/androidx/releases/concurrent
+    coroutines                : '1.5.0',  // https://github.com/Kotlin/kotlinx.coroutines/blob/master/CHANGES.md
+
+    activity                  : '1.3.0',  // https://developer.android.com/jetpack/androidx/releases/activity
+    annotation                : '1.2.0',  // https://developer.android.com/jetpack/androidx/releases/annotation
+    appCompat                 : '1.3.1',  // https://developer.android.com/jetpack/androidx/releases/appcompat
+    constraintLayout          : '2.0.4',  // https://developer.android.com/jetpack/androidx/releases/constraintlayout
+    coordinatorLayout         : '1.1.0',  // https://developer.android.com/jetpack/androidx/releases/coordinatorlayout
+    fragment                  : '1.3.6',  // https://developer.android.com/jetpack/androidx/releases/fragment
+    lifecycle                 : '2.3.1',  // https://developer.android.com/jetpack/androidx/releases/lifecycle
+    material                  : '1.2.1',  // https://github.com/material-components/material-components-android
+    preference                : '1.1.1',  // https://developer.android.com/jetpack/androidx/releases/preference
+    recyclerView              : '1.2.1',  // https://developer.android.com/jetpack/androidx/releases/recyclerview
+
+    moshi                     : '1.9.2',  // https://github.com/square/moshi/releases
+    okHttp                    : '3.14.9', // https://square.github.io/okhttp/changelog_3x/#version-31210
+    shimmer                   : '0.5.0',  // https://github.com/facebook/shimmer-android
+
+    junit                     : '4.13.2', // https://github.com/junit-team/junit4/blob/main/doc/ReleaseNotes4.12.md
+    junitExt                  : '1.1.3',
+    espresso                  : '3.4.0',
+
+    mobMetrica                : '3.13.1', // https://wiki.yandex-team.ru/YandexMobile/appmetrica/sdk/help/android/changelog/
+    authSdk                   : '2.3.1',  // https://yandex.ru/dev/mobileauthsdk/doc/sdk/concepts/android/2.1.0/sdk-android-install.html
+]
+
+ext.libraries = [
+    kotlinStdLib              : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+    coreKtx                   : "androidx.core:core-ktx:$versions.coreKtx",
+    concurrentFuturesKtx      : "androidx.concurrent:concurrent-futures-ktx:$versions.concurrentKtx",
+    coroutinesCore            : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines",
+    coroutinesAndroid         : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+    coroutinesTest            : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines",
+
+    activity                  : "androidx.activity:activity-ktx:$versions.activity",
+    annotation                : "androidx.annotation:annotation:$versions.annotation",
+    appCompat                 : "androidx.appcompat:appcompat:$versions.appCompat",
+    constraintLayout          : "androidx.constraintlayout:constraintlayout:$versions.constraintLayout",
+    coordinatorLayout         : "androidx.coordinatorlayout:coordinatorlayout:$versions.coordinatorLayout",
+    fragment                  : "androidx.fragment:fragment-ktx:$versions.fragment",
+    lifecycleViewModel        : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
+    lifecycleLiveData         : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
+    lifecycleCompiler         : "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle",
+    material                  : "com.google.android.material:material:$versions.material",
+    preference                : "androidx.preference:preference:$versions.preference",
+    recyclerView              : "androidx.recyclerview:recyclerview:$versions.recyclerView",
+
+    junit                     : "junit:junit:$versions.junit",
+    junitExt                  : "androidx.test.ext:junit:$versions.junitExt",
+    espresso                  : "androidx.test.espresso:espresso-core:$versions.espresso",
+
+    okHttp                    : "com.squareup.okhttp3:okhttp:$versions.okHttp",
+    loggingInterceptor        : "com.squareup.okhttp3:logging-interceptor:$versions.okHttp",
+
+    moshi                     : "com.squareup.moshi:moshi-kotlin:$versions.moshi",
+
+    mobMetrica                : "com.yandex.android:mobmetricalib:$versions.mobMetrica",
+    authSdk                   : "com.yandex.android:authsdk:$versions.authSdk",
+
+    shimmer                   : "com.facebook.shimmer:shimmer:$versions.shimmer",
+]
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+

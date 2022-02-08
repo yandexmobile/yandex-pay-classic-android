@@ -1,0 +1,25 @@
+config:
+  name:
+    YandexPay_Android_Build
+  build_counter:
+    Yandex_Pay_Android_Build_Counter
+  runner_version:
+    2021.09.27-8673273
+stages:
+  assemble:
+    work_dir:
+      mobile/yandex-pay/android/
+    cmd:
+      - ./gradlew :core:assemble
+    caches:
+      - ~/.gradle/wrapper
+      - ~/.gradle/caches/modules-2/files-2.1
+      - ~/.gradle/caches/modules-2/metadata-2.96
+    lxc:
+      2161339669
+    android-sdk:
+      platforms(28,29,30,31)+tools(31.0.0)
+    artifacts:
+      +core/build/outputs/*: core/outputs
+    multislot:
+      MEDIUM

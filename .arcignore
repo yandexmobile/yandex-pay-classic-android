@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+.DS_Store
+build
+/captures
+.externalNativeBuild
+.cxx
+
+.idea/*
+# # Share code style and inspection settings between developers
+# !.idea/codeStyleSettings.xml
+# !.idea/codeStyles/codeStyleConfig.xml
+# !.idea/codeStyles/Project.xml
+# !.idea/inspectionProfiles/Project_Default.xml

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="yandexpay_pay_button_title">Pay with <annotation type="Y.Pay Logo" /></string>
+    <string name="yandexpay_main_activity_title">Yandex.Pay</string>
+    <string name="yandexpay_checkout_button_title">Checkout</string>
+    <string name="yandexpay_back_button_title">Back</string>
+    <string name="yandexpay_card_number">•••• <xliff:g id="Last four digits">%1$s</xliff:g></string>
+    <string name="yandexpay_pay_button_card_number">••• <xliff:g id="Last four digits">%1$s</xliff:g></string>
+    <string name="yandexpay_collapsed_input_card_number">•• <xliff:g id="Last four digits">%1$s</xliff:g></string>
+    <string name="yandexpay_license_agreement_text">By tapping <b>Checkout</b> you agree to <annotation type="license_agreement_link">License\u00A0Agreement</annotation></string>
+    <string name="yandexpay_license_agreement_url">https://yandex.ru/legal</string>
+    <string name="yandexpay_card_title"><xliff:g id="Card Network name">%1$s</xliff:g></string>
+    <string name="yandexpay_add_new_card_title">Add new payment card</string>
+    <string name="yandexpay_card_number_input_title">Card Number</string>
+    <string name="yandexpay_expiration_date_input_title">Expiration date</string>
+    <string name="yandexpay_wrong_card_number_message">Incorrect card number</string>
+    <string name="yandexpay_wrong_expiration_date_message">Incorrect expiration date</string>
+    <string name="yandexpay_wrong_cvn_message">Incorrect CVV/CVN</string>
+    <string name="yandexpay_cvv_input_title">CVV</string>
+    <string name="yandexpay_next_button_complete_title">Add</string>
+    <string name="yandexpay_next_button_incomplete_title">Fill in the data</string>
+    <string name="yandexpay_checkout_in_progress_title">Payment processing…</string>
+    <string name="yandexpay_checkout_done_title">Done</string>
+    <string name="yandexpay_checkout_error_title">An error occurred</string>
+    <string name="yandexpay_bind_card_progress_title">Checking data…</string>
+    <string name="yandexpay_bind_card_done_title">Done</string>
+    <string name="yandexpay_bind_card_error_title">@string/yandexpay_checkout_error_title</string>
+    <string name="yandexpay_card_number_hint">0000 0000 0000 0000</string>
+    <string name="yandexpay_card_expiration_date_hint">MM/YY</string>
+    <string name="yandexpay_card_cvn_hint">000</string>
+    <string name="yandexpay_card_details_prompt">Enter card details</string>
+</resources>

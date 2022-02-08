@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.FrameLayout"
+    tools:context=".ui.YandexPayButton">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/yandexpay_pay_button_generic"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/yandexpay_pay_button_title"
+            android:textAppearance="@style/YandexPayTextAppearance.Pay"
+            android:drawablePadding="2sp"
+            app:drawableEndCompat="@drawable/yandexpay_ic_logo_white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/yandexpay_pay_button_personalized"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/yandexpay_logo"
+                android:src="@drawable/yandexpay_ic_logo_white"
+                android:layout_width="62dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constrainedHeight="true"
+                android:contentDescription="@string/yandexpay_logo" />
+
+            <TextView
+                android:id="@+id/yandexpay_card_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/YandexPayTextAppearance.PayButtonCardNumber"
+                tools:text="••• 4444"
+                android:paddingStart="8dp"
+                android:paddingEnd="14dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/yandexpay_pay_button_card_number_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:id="@+id/yandexpay_avatar_image"
+                android:layout_width="@dimen/yandexpay_avatar_size"
+                android:layout_height="@dimen/yandexpay_avatar_size"
+                android:background="@drawable/yandexpay_avatar_round_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="14dp"
+                android:contentDescription="@string/yandexpay_avatar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.views.HeaderView"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/yandexpay_main_logo_title"
+        android:layout_width="70dp"
+        android:layout_height="28dp"
+        android:src="@drawable/yandexpay_ic_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/yandexpay_logo" />
+
+    <TextView
+        android:id="@+id/yandexpay_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yandexpay_back_button_title"
+        android:textAppearance="@style/YandexPayTextAppearance.Back"
+        android:drawablePadding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        android:background="?attr/selectableItemBackground"
+        app:drawableStartCompat="@drawable/yandexpay_ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.yandex.pay.core.ui.views.AvatarView
+        android:id="@+id/yandexpay_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginStart="10dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@id/yandexpay_main_logo_title"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</merge>

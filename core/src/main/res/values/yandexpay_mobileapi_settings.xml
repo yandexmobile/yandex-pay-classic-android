@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="yandexpay_mobileapi_stage_url_string" translatable="false">https://mobpayment-test.yandex-team.ru/</string>
+    <string name="yandexpay_mobileapi_prod_url_string" translatable="false">https://mobpayment.yandex.net/</string>
+    <string name="yandexpay_mobileapi_version" translatable="false">2.9.0</string>
+    <bool name="yandexpay_mobileapi_force_cvv">false</bool>
+</resources>

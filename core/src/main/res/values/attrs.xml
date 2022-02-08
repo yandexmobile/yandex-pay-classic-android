@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="yandexpay_appTheme">
+        <attr name="yandexpay_background" format="color|reference" />
+        <attr name="yandexpay_navigationArrowColor" format="color|reference" />
+        <attr name="yandexpay_navigationTextColor" format="color|reference" />
+        <attr name="yandexpay_cardNameTextColor" format="color|reference" />
+        <attr name="yandexpay_accessoryColor" format="color|reference" />
+        <attr name="yandexpay_topHandleColor" format="color|reference" />
+        <attr name="yandexpay_brandButtonIcon" format="reference" />
+        <attr name="yandexpay_checkoutButtonColor" format="color|reference" />
+        <attr name="yandexpay_checkoutButtonTitleColor" format="color|reference" />
+        <attr name="yandexpay_errorColor" format="color|reference" />
+        <attr name="yandexpay_licenseAgreementColor" format="color|reference" />
+        <attr name="yandexpay_addNewCardColor" format="color|reference" />
+        <attr name="yandexpay_textFieldTintColor" format="color|reference" />
+        <attr name="yandexpay_textCursorColor" format="color|reference" />
+        <attr name="yandexpay_shimmerColor" format="color|reference" />
+        <attr name="yandexpay_priceTitleBackgroundColor" format="color|reference" />
+        <attr name="yandexpay_cardBorderColor" format="color|reference" />
+        <attr name="yandexpay_checkoutProgressIndicationColor" format="color|reference" />
+        <attr name="yandexpay_checkoutProgressIndicationBackgroundColor" format="color|reference" />
+        <attr name="yandexpay_checkoutDoneBackgroundColor" format="color|reference" />
+        <attr name="yandexpay_checkoutErrorBackgroundColor" format="color|reference" />
+        <attr name="yandexpay_disclosureMarkColor" format="color|reference" />
+        <attr name="yandexpay_checkmarkColor" format="color|reference" />
+        <attr name="yandexpay_logoTextColor" format="color|reference" />
+        <attr name="yandexpay_cardEditHintColor" format="color|reference" />
+        <attr name="yandexpay_cardEditTextColor" format="color|reference" />
+        <attr name="yandexpay_avatarTextColor" format="color|reference" />
+
+        <attr name="yandexpay_cardBindingButtonColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingButtonTitleColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingProgressIndicationColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingProgressIndicationBackgroundColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingDoneColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingDoneBackgroundColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingDisabledBackgroundColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingDisabledColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingErrorColor" format="color|reference" />
+        <attr name="yandexpay_cardBindingButtonErrorBackgroundColor" format="color|reference" />
+        <attr name="yandexpay_cardDetailsPromptColor" format="color|reference" />
+        <!-- CARD NETWORKS -->
+        <attr name="yandexpay_american_express" format="reference" />
+        <attr name="yandexpay_diners_club" format="reference" />
+        <attr name="yandexpay_discover_card" format="reference" />
+        <attr name="yandexpay_jcb" format="reference" />
+        <attr name="yandexpay_maestro" format="reference" />
+        <attr name="yandexpay_mastercard" format="reference" />
+        <attr name="yandexpay_union_pay" format="reference" />
+        <attr name="yandexpay_uzcard" format="reference" />
+        <attr name="yandexpay_mir" format="reference" />
+        <attr name="yandexpay_visa" format="reference" />
+        <attr name="yandexpay_visa_electron" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="YandexPayButton">
+        <!-- Defines general personalizing button behavior. -->
+        <attr name="yandexpay_personalization" format="integer" tools:ignore="ResourceName">
+            <!-- The button always shows "Pay with YPay text", never becomes personalized. Default value. -->
+            <enum name="none" value="0" />
+            <!-- The button is personalized: shows the last used card (if any) and user's name and avatar.
+            The button also updates its content upon displaying -->
+            <enum name="updating" value="1" />
+            <!-- The button is personalized: shows the last used card (if any) and user's name and avatar.
+             The button doesn't update its contents upon displaying.
+             Rather, shows the last used card number and user's name and avatar -->
+            <enum name="last_value" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

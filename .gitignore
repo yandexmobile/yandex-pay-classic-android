@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+.DS_Store
+build
+/captures
+.externalNativeBuild
+.cxx
+
+.idea/*
+
+core/src/main/res/raw/yandexpay_bindings_key_*.der
+sample/
