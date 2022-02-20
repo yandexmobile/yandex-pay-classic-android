@@ -44,7 +44,7 @@ internal class Confirm3DSViewModel(
         private val parentViewModel: MainViewModel,
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T =
+        override fun <T : ViewModel> create(modelClass: Class<T>): T =
             takeIf { modelClass == Confirm3DSViewModel::class.java }?.let {
                 Confirm3DSViewModel(application, parentViewModel)
             } as T

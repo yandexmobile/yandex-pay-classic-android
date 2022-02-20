@@ -25,7 +25,7 @@ allprojects {
 }
 
 ext.versions = [
-    'name'                    : '0.1.0',
+    'name'                    : '0.1.1',
     'code'                    : 1,
 
     compileSdk                : 31,
@@ -34,19 +34,19 @@ ext.versions = [
     buildTools                : '31.0.0',
 
     // https://developer.android.com/jetpack/androidx/versions
-    coreKtx                   : '1.6.0',  // https://developer.android.com/jetpack/androidx/releases/core
+    coreKtx                   : '1.7.0',  // https://developer.android.com/jetpack/androidx/releases/core
     concurrentKtx             : '1.1.0',  // https://developer.android.com/jetpack/androidx/releases/concurrent
     coroutines                : '1.5.0',  // https://github.com/Kotlin/kotlinx.coroutines/blob/master/CHANGES.md
 
     activity                  : '1.3.0',  // https://developer.android.com/jetpack/androidx/releases/activity
-    annotation                : '1.2.0',  // https://developer.android.com/jetpack/androidx/releases/annotation
-    appCompat                 : '1.3.1',  // https://developer.android.com/jetpack/androidx/releases/appcompat
-    constraintLayout          : '2.0.4',  // https://developer.android.com/jetpack/androidx/releases/constraintlayout
-    coordinatorLayout         : '1.1.0',  // https://developer.android.com/jetpack/androidx/releases/coordinatorlayout
-    fragment                  : '1.3.6',  // https://developer.android.com/jetpack/androidx/releases/fragment
-    lifecycle                 : '2.3.1',  // https://developer.android.com/jetpack/androidx/releases/lifecycle
-    material                  : '1.2.1',  // https://github.com/material-components/material-components-android
-    preference                : '1.1.1',  // https://developer.android.com/jetpack/androidx/releases/preference
+    annotation                : '1.3.0',  // https://developer.android.com/jetpack/androidx/releases/annotation
+    appCompat                 : '1.4.1',  // https://developer.android.com/jetpack/androidx/releases/appcompat
+    constraintLayout          : '2.1.3',  // https://developer.android.com/jetpack/androidx/releases/constraintlayout
+    coordinatorLayout         : '1.2.0',  // https://developer.android.com/jetpack/androidx/releases/coordinatorlayout
+    fragment                  : '1.4.1',  // https://developer.android.com/jetpack/androidx/releases/fragment
+    lifecycle                 : '2.4.1',  // https://developer.android.com/jetpack/androidx/releases/lifecycle
+    material                  : '1.5.0',  // https://github.com/material-components/material-components-android
+    preference                : '1.2.0',  // https://developer.android.com/jetpack/androidx/releases/preference
     recyclerView              : '1.2.1',  // https://developer.android.com/jetpack/androidx/releases/recyclerview
 
     moshi                     : '1.9.2',  // https://github.com/square/moshi/releases

@@ -291,7 +291,7 @@ internal class PaymentViewModel(
     ) :
         ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T =
+        override fun <T : ViewModel> create(modelClass: Class<T>): T =
             takeIf { modelClass == PaymentViewModel::class.java }?.let {
                 PaymentViewModel(application, parentViewModel)
             } as T

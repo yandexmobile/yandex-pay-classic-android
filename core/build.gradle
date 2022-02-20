@@ -53,13 +53,11 @@ dependencies {
     implementation libraries.kotlinStdLib
     implementation libraries.coreKtx
 
-    implementation libraries.activity
     implementation libraries.constraintLayout
     implementation libraries.coordinatorLayout
     implementation libraries.fragment
     implementation libraries.lifecycleViewModel
     implementation libraries.lifecycleLiveData
-    implementation libraries.lifecycleCompiler
     implementation libraries.material
     implementation libraries.preference
     implementation libraries.recyclerView

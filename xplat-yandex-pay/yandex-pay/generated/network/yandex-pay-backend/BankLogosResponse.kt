@@ -5,23 +5,39 @@ package com.yandex.xplat.yandex.pay
 import com.yandex.xplat.common.*
 import com.yandex.xplat.eventus.common.*
 
-public open class BankLogosResponse(status: String, code: Int, val logos: YSMap<String, String>): BaseNetworkResponse(status, code) {
+public open class BankLogosResponse(status: String, code: Int, val logos: YSMap<String, BankLogo>): BaseNetworkResponse(status, code) {
     companion object {
         @JvmStatic
         open fun fromJSONItem(json: JSONItem): Result<BankLogosResponse> {
             return decodeJSONItem(json, __LBL__BankLogosResponse_1@ {
                 item ->
                 val map = item.tryCastAsMapJSONItem().asMap()
-                val result = mutableMapOf<String, String>()
+                val result = mutableMapOf<String, BankLogo>()
                 map.__forEach(__LBL__BankLogosResponse_2@ {
                     value, key ->
-                    val stringValue = undefinedToNull(value.castAsStringJSONItem()?.value)
-                    if (stringValue != null) {
-                        result.set(key, stringValue)
+                    val bankMap = value.castAsMapJSONItem()
+                    val bankLogo = if (bankMap != null) this.extractBankLogo(bankMap!!) else null
+                    if (bankLogo != null) {
+                        result.set(key, bankLogo!!)
                     }
                 })
                 return@__LBL__BankLogosResponse_1 BankLogosResponse("success", 200, result)
             })
+        }
+
+        @JvmStatic
+        private fun extractBankLogo(map: MapJSONItem): BankLogo {
+            val fullLogoItem = this.extractBankLogoItem(undefinedToNull(map.`get`("FULL")?.castAsMapJSONItem()))
+            val shortLogoItem = this.extractBankLogoItem(undefinedToNull(map.`get`("SHORT")?.castAsMapJSONItem()))
+            return BankLogo(fullLogoItem, shortLogoItem)
+        }
+
+        @JvmStatic
+        private fun extractBankLogoItem(map: MapJSONItem?): BankLogoItem {
+            val light = undefinedToNull(map?.getString("LIGHT"))
+            val dark = undefinedToNull(map?.getString("DARK"))
+            val mono = undefinedToNull(map?.getString("MONO"))
+            return BankLogoItem(light, dark, mono)
         }
 
     }

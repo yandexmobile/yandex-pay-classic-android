@@ -11,7 +11,7 @@ public open class BankLogosRequest(): BaseNetworkRequest() {
     }
 
     open override fun targetPath(): String {
-        return "web-api/mobile/v1/bank_logos"
+        return "web-api/mobile/v2/bank_logos"
     }
 
     open override fun encoding(): RequestEncoding {

@@ -95,7 +95,7 @@ internal class AuthorizationViewModel(
     ) :
         ViewModelProvider.AndroidViewModelFactory(application) {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T =
+        override fun <T : ViewModel> create(modelClass: Class<T>): T =
             takeIf { modelClass == AuthorizationViewModel::class.java }?.let {
                 AuthorizationViewModel(application, fragment, parentViewModel)
             } as T

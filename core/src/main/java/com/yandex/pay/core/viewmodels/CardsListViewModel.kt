@@ -78,7 +78,7 @@ internal class CardsListViewModel(
         private val parentViewModel: MainViewModel,
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T =
+        override fun <T : ViewModel> create(modelClass: Class<T>): T =
             takeIf { modelClass == CardsListViewModel::class.java }?.let {
                 CardsListViewModel(application, parentViewModel)
             } as T

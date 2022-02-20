@@ -135,7 +135,7 @@ internal class MainViewModel(
         private val postponeRunner: (Long, Runnable) -> Unit
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T =
+        override fun <T : ViewModel> create(modelClass: Class<T>): T =
             takeIf { modelClass == MainViewModel::class.java }?.let {
                 MainViewModel(application, store, postponeRunner)
             } as T
