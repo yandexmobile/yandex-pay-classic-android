@@ -8,8 +8,8 @@ Yandex Pay Mobile Library for Android
 - Yandex OAuth ID which can be obtained [here](https://oauth.yandex.ru/)
 
 ## Installation
-The library is located on Maven Central repository.
-- Add `mavenCentral()` as a dependency source to your android project:
+The library is located in Maven Central repository.
+- Add `mavenCentral()` as a dependency repository to your android project:
 ```gradle
 allprojects {
   repositories {
@@ -18,14 +18,14 @@ allprojects {
   }
 }
 ```
-- Include `com.yandex.pay:core:0.1.1` as an `implementation` in your `dependencies` section of `build.gradle` script:
+- Include `com.yandex.pay:core:0.1.1` as `implementation` in `dependencies` section of `build.gradle` script:
 ```gradle
 dependencies {
   // ...
   implementation 'com.yandex.pay:core:0.1.1`
 }
 ```
-- Set `YANDEX_CLIENT_ID` which you obtained from `oauth.yandex.ru` in your `build.gradle` as a manifest placeholder:
+- Set `YANDEX_CLIENT_ID` which was obtained from `oauth.yandex.ru` in your `build.gradle` as a manifest placeholder:
 ```gradle
 android {
   // ...
@@ -47,7 +47,7 @@ The initialization step must be done before any use of `YandexPayLib` including 
 if (YandexPayLib.isSupported) {
   YandexPayLib.initialize(
     YandexPayLibConfig(
-      logging = true, // Логгировать ли события в Logcat
+      logging = true, // Should the library log events in logcat
     ),
     this // Application Context,
   )
@@ -75,7 +75,7 @@ Below is the sample code to display the button:
 
 `app:yandexpay_personalization` allows to customize the button display/personalization mode:
 - `none`: the button is not personalized. It displays the prompt "Pay with Y.Pay"
-- `last_value`: the button is personalized. It displays the Y.Pay logo, the last card that was used with Y.Pay and a user's userpic. When used for the first time, the button looks like it's in the mode `none`
+- `last_value`: the button is personalized. It displays the Yandex Pay logo, the last card that was used with Yandex Pay and a user's userpic. When used for the first time, the button looks like it's in the mode `none`
 - `updating`: the mode is similar to `last_value`, but when it's added on a window, `onAttachedToWindow` method will try to validate the previously used card for payment and fetch a new userpic, if any.
 
 ### Handle the button interaction
